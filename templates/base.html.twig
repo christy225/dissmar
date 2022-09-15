@@ -2,25 +2,27 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>
 			{% block title %}Welcome!
 			{% endblock %}
 		</title>
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 		<!-- Font Awesome -->
 		<link
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/> <!-- Google Fonts -->
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+		<!-- Google Fonts -->
 		<link
 		href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
 		<!-- MDB -->
-		<link
-		href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.css" rel="stylesheet"/>
-		<!-- MDB -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/#[[latestVersion]]#/mdb.min.js"></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet"/>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<!-- MDB -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
@@ -36,31 +38,26 @@
 	</head>
 	<body>
 		<nav
-			class="navbar navbar-expand-lg navbar-light bg-light">
+			class="navbar navbar-expand-lg navbar-light" style="background-color: #000;">
 			<!-- Container wrapper -->
-			<div
-				class="container-fluid">
-
+			<div class="container-fluid">
+				<a class="mx-2" href="{{path('app_home')}}"><img src="{{asset('images/logo.png')}}" width="60"></a>
 				<!-- Toggle button -->
 				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
 					<i class="fas fa-bars"></i>
 				</button>
-
 				<!-- Collapsible wrapper -->
 				<div
 					class="collapse navbar-collapse" id="navbarRightAlignExample">
 					<!-- Left links -->
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#">Home</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Link</a>
+							<a class="nav-link active text-white mx-2" aria-current="page" href="#">Accueil</a>
 						</li>
 						<!-- Navbar dropdown -->
 						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-								Dropdown
+							<a class="text-white nav-link dropdown-toggle mx-2" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+								Nos services
 							</a>
 							<!-- Dropdown menu -->
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -72,12 +69,15 @@
 								</li>
 								<li><hr class="dropdown-divider"/></li>
 								<li>
-									<a class="dropdown-item" href="#">Something else here</a>
+									<a class="dropdown-item" href="#">Développement Web</a>
 								</li>
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link disabled">Disabled</a>
+							<a class="nav-link text-white mx-2">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white mx-2">Contact</a>
 						</li>
 					</ul>
 					<!-- Left links -->
