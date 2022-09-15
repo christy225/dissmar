@@ -8,6 +8,7 @@
 			{% endblock %}
 		</title>
 		<!-- Font Awesome -->
+		<link rel="shortcut icon" href="{{asset('images/logo-fav.png')}}" type="image/x-icon">
 		<link
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 		<!-- Google Fonts -->
@@ -44,7 +45,7 @@
 				<a class="mx-2" href="{{path('app_home')}}"><img src="{{asset('images/logo.png')}}" width="60"></a>
 				<!-- Toggle button -->
 				<button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarRightAlignExample" aria-controls="navbarRightAlignExample" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fas fa-bars"></i>
+					<i class="fas fa-bars text-white"></i>
 				</button>
 				<!-- Collapsible wrapper -->
 				<div
@@ -62,11 +63,15 @@
 							<!-- Dropdown menu -->
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<li>
-									<a class="dropdown-item" href="#">Action</a>
+									<a class="dropdown-item" href="#">Conseil et Stratégies</a>
 								</li>
 								<li>
-									<a class="dropdown-item" href="#">Another action</a>
+									<a class="dropdown-item" href="#">Design Graphique</a>
 								</li>
+								<li>
+									<a class="dropdown-item" href="#">Audio Visuel</a>
+								</li>
+
 								<li><hr class="dropdown-divider"/></li>
 								<li>
 									<a class="dropdown-item" href="#">Développement Web</a>
